@@ -46,3 +46,5 @@ public: /*increment and decrement operators*/
 public: /*debug options*/
 	const char *genstr();
 };
+
+mpfl sqrt(mpfl num);

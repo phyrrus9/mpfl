@@ -19,6 +19,8 @@ int main()
 	mpfl r(p * q);
 	mpfl s(r / p);
 
+	mpfl t(sqrt(144));
+
 	printf("i: %s\n", i.genstr());
 	printf("j: %s\n", j.genstr());
 	printf("k: %s\n", k.genstr());
@@ -32,5 +34,7 @@ int main()
 	printf("q: %s\n", q.genstr());
 	printf("r: %s\n", r.genstr());
 	printf("s: %s\n", s.genstr());
+
+	printf("t: %s\n", t.genstr());
 	return 0;
 }

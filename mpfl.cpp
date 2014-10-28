@@ -80,7 +80,6 @@ void doborrow(unsigned char *bflag, mpfl_byte *arr, unsigned long i)
 {
 	if (i == 0)
 	{
-		printf("we have overflow\n");
 		*bflag = 1;
 		return;
 	}
@@ -250,4 +249,19 @@ const char * mpfl::genstr()
 	for (i = 0; i < nbytes; i++)
 		sprintf(&buf[i * 2], "%02x", data[i]);
 	return (const char *)buf;
+}
+
+mpfl sqrt(mpfl num)
+{
+	mpfl n;
+	mpfl n1;
+	if (0 == num) return 0;
+	n = (num / 2) + 1;
+	n1 = (n + (num / n)) / 2;
+	while (n1 < n)
+	{
+		n = n1;
+		n1 = (n + (num / n)) / 2;
+	}
+	return n;
 }
